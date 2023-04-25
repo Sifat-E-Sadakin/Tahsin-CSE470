@@ -13,6 +13,7 @@ import LayOut from './Components/Layout/LayOut.jsx';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute.jsx';
 import Home from './Components/Home/Home';
 import Play from './Components/Play/Play';
+import Fab from './Components/Fab/Fab';
 
 const router = createBrowserRouter([
   {
@@ -31,14 +32,22 @@ const router = createBrowserRouter([
         path: "/home",
         element:<PrivateRoute><Home></Home></PrivateRoute>,
       },
-      // {
-      //   path: "/",
-      //   element:<PrivateRoute><Home></Home></PrivateRoute>,
+      {
+        path: "/",
+        element:<PrivateRoute><Home></Home></PrivateRoute>,
       
-      // },
+      },
       {
         path: "/play/:id",
         element: <Play></Play>
+      },
+      {
+        path: "/fab",
+        element: <PrivateRoute><Fab></Fab></PrivateRoute>
+      },
+      {
+        path: "/*",
+        element: <h1> Opss..! You are in Wrong Place</h1>
       }
 
     ],

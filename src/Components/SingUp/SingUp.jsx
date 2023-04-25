@@ -42,7 +42,7 @@ const SingUp = () => {
         .then(res=>{
             let user= res.user;
             verifyEmail(user);
-            alert('Verify Your Email For Better Experience')
+            alert('Account Created Successfully. Verify Your Email For Better Experience')
             console.log(user);
         })
         .catch(err=>{

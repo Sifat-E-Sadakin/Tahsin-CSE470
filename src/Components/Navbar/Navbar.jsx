@@ -21,10 +21,10 @@ const Navbar = () => {
         </div>
         <div className='anchors'>
             <ActiveLink to="/home">Home</ActiveLink>
-            <ActiveLink to="/new">New</ActiveLink>
+            <ActiveLink to="/fab">Favorite</ActiveLink>
             <ActiveLink to="/inventory">Inventory</ActiveLink>
-            <ActiveLink to="/login">Login</ActiveLink>
-            <ActiveLink to="/singUp">Sing Up</ActiveLink>
+           {user?  <></>: <ActiveLink to="/login">Login</ActiveLink>}
+           {user?  <></>: <ActiveLink to="/singUp">Sing Up</ActiveLink>}
             {user && <><ActiveLink>{user.email}</ActiveLink> <Link onClick={loggingOut}>Logout</Link></> }
         </div>
         

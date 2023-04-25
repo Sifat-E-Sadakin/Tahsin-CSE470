@@ -1,28 +1,19 @@
-import { } from 'react';
-import { Link } from 'react-router-dom';
+import {} from 'react';
 import { FaHeart } from 'react-icons/fa';
-import { addToDb } from '../utilities/LocalStorage';
-import toast, { Toaster } from 'react-hot-toast';
+import { Link } from 'react-router-dom';
+import { removeFromDb } from '../utilities/LocalStorage';
 
-const Trending = (props) => {
 
-    console.log(props.data);
+const ShowFav = (props) => {
 
-    let {title, link, photo, description, id}= props.data
+    console.log(props.podcast);
 
-    console.log(link);
+    let {title, link, photo, description, id}= props.podcast
 
-  let addToPlay = props.addToPlay
+    let addToPlay = props //addToPlay
 
-  let favorite= (id)=>{
-    let heart = document.getElementById('heart');
-    heart.style.color='red';
-    console.log(id);
-    addToDb(id);
-    toast('Added in Favorite List')
+  let unFavorite= props.unFavorite;
 
-    
-  }
 
     return (
         <div>
@@ -32,7 +23,7 @@ const Trending = (props) => {
                     <h2 className="card-title">{title}</h2>
                     <p>{description}</p>
                     <div className="card-actions justify-end flex items-center">
-                    <button className='btn btn-warning btn-xs' onClick={()=>favorite(id)} id='heart'>add to favorite</button>
+                        <button className='btn btn-warning btn-xs' onClick={()=>unFavorite(id)} id='heart'>Remove From Favorite</button>
                         <button className="btn btn-primary" onClick={()=> addToPlay(id)} ><Link to={`/play/${id}`}>Play Now</Link></button>
                     </div>
                 </div>
@@ -40,9 +31,9 @@ const Trending = (props) => {
             {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/VYDdvW-nN9k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
             
             {/* {link &&   <iframe width="560" height="315" src={link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>} */}
-<Toaster></Toaster>
+
         </div>
     );
 };
 
-export default Trending;
+export default ShowFav;
