@@ -15,10 +15,10 @@ const Home = () => {
     },[])
 
     let addToPlay = (id)=>{
-        console.log('playing', id);
-        let playing =  podcast.find(pId => pId.id == id)
-        console.log(playing);
-        addToDb(id)
+        // console.log('playing', id);
+        // let playing =  podcast.find(pId => pId.id == id)
+        // console.log(playing);
+        // addToDb(id)
       }
     
 

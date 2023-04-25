@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import { getShoppingCart, removeFromDb } from '../utilities/LocalStorage';
+import { useParams } from 'react-router-dom';
 
 const Play = () => {
 
+    let Pid = useParams()
+  
 
    
 
@@ -15,20 +18,22 @@ const Play = () => {
         .then(data=> configData(data))
 
         let configData =(data)=>{
-            let selectedID;
-            let selectedPodcast = getShoppingCart();
+            
+           
 
-            // console.log(data);
+        console.log(data);
+        console.log(Pid.id,"param");
 
-            for (const iterator in selectedPodcast) {
-                selectedID= iterator;
+        let p = data.find(i => i.id == Pid.id)
+        console.log(p);
+        setPodCast(p);
+
+
+           
                 
-           let p=  data.find(i => i.id == selectedID);
-           console.log(p);
-           setPodCast(p)
-
-                removeFromDb(iterator)
-            }
+          
+               
+            
             
 
 
