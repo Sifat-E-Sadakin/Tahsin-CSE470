@@ -1,0 +1,28 @@
+.header{
+    background-color: rgb(197, 174, 174);
+    padding: 0 02rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    padding: 10px;
+   
+    
+}
+.anchors{
+    display: flex;
+    align-items: center;
+}
+
+.anchors a{
+    padding-left: 01rem;
+}
+@media (max-width: 576px) {
+   .header{
+    width: 100%;
+   }
+   .anchors{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+  }

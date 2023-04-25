@@ -1,0 +1,65 @@
+[
+{
+    "id":"1",
+    "title": "Perspective Podcast-Religion and Science",
+    "description": "A channel that brings you insightful discussions and interviews about various topics.",
+    "host": "Yahia Amin",
+    "language": "Bengali",
+    "category": "Education",
+    "link":"https://www.youtube.com/embed/VYDdvW-nN9k",
+    "photo":"./images/podcast-1.png"
+  },
+
+    {
+        "id":"2",
+        "title": "Perspective Podcast-Mental Health",
+        "description": "A channel that brings you insightful discussions and interviews about various topics.",
+        "host": "John Doe",
+        "language": "Bengali",
+        "category": "Education",
+         "link":"https://www.youtube.com/embed/beAlRMIMab0",
+         "photo":"./images/podcast-2.png"
+      },
+    
+    {
+        "id":"3",
+        "title": "How should be your career choice",
+        "description": "A channel that brings you insightful discussions and interviews about various topics.",
+        "host": "Trinominal Podcast",
+        "language": "Bengali",
+        "category": "Education",
+        "link":"https://www.youtube.com/embed/HOGpUQFSoXk",
+        "photo":"./images/podcast-3.png"
+        
+      },
+    {
+        "id":"4",
+        "title": "From Zero to 10 Million YouTube Subscribers - Mrwhosetheboss",
+        "description": "A channel that brings you insightful discussions and interviews about various topics.",
+        "host": "Ali Abdal",
+        "language": "English",
+        "category": "Education",
+        "link":"https://www.youtube.com/embed/TQqKOi8UGG4",
+        "photo":"./images/podcast-4.png"
+      },
+    {
+        "id":"5",
+        "title": "Change Your Brain: Neuroscientist Dr. Andrew Huberman",
+        "description": "A channel that brings you insightful discussions and interviews about various topics.",
+        "host": "Rick Roll",
+        "language": "English",
+        "category": "Education",
+        "link":"https://www.youtube.com/embed/SwQhKFMxmDY",
+        "photo":"./images/podcast-5.png"
+      },
+    {
+        "id":"6",
+        "title": "Ed Mylett ON: Watch These 37 Minutes To COMPLETELY CHANGE Your Life",
+        "description": "A channel that brings you insightful discussions and interviews about various topics.",
+        "host": "John Doe",
+        "language": "English",
+        "category": "Education",
+        "link":"https://www.youtube.com/embed/siNNCI6JAjk",
+        "photo":"./images/podcast-6.png"
+      }
+]
