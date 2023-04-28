@@ -9,7 +9,7 @@ const Home = () => {
     let [podcast, setPodCast] = useState();
 
     useEffect(()=>{
-        fetch('/data.json')
+        fetch('http://localhost:3000/')
         .then(res=> res.json())
         .then(data=> setPodCast(data))
     },[])
@@ -36,9 +36,9 @@ const Home = () => {
 
             </div>
 
-            <h1 className='text-center text-4xl m-5'>Trending Now {}</h1>
+            <h1 className='text-center text-4xl m-5 my-20'>Trending Now {}</h1>
 
-            <div className='grid grid-cols-3  justify-center gap-8'>
+            <div className='grid md:grid-cols-3  justify-center gap-8 container mx-auto'>
 
             {podcast &&
                     podcast.map(p=> <Trending data={p} key={p} addToPlay={addToPlay}></Trending>)

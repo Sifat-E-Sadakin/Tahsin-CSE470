@@ -8,7 +8,7 @@ const Fab = () => {
     let [podcast, setPodCast] = useState();
 
     useEffect(() => {
-        fetch('/data.json')
+        fetch('http://localhost:3000/')
             .then(res => res.json())
             .then(data => configPodcast(data))
 
@@ -55,9 +55,9 @@ const Fab = () => {
 
     return (
         <div>
-            <h1>Favorite podcast {podcast && podcast.length}</h1>
+            <h1 className='text-center text-3xl font-semibold my-10'>Total Favorite podcast {podcast && podcast.length}</h1>
 
-            <div className='grid grid-cols-3  justify-center gap-8'>
+            <div className='grid grid-cols-3  justify-center gap-8 container mx-auto'>
                 {podcast &&
 
                     podcast.map(pc => <ShowFav podcast={pc} unFavorite={unFavorite} key={pc.id} ></ShowFav>)
